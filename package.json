@@ -34,5 +34,6 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

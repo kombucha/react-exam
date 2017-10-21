@@ -12,9 +12,11 @@ export const JEDI_CREATION_RECEIVED = "JEDI_CREATION_RECEIVED";
 
 export const jediReceived = jedi => ({ type: JEDI_RECEIVED, payload: jedi });
 
+const BASE_API_URL = process.env.BASE_API_URL || "";
+
 export const createJedi = jedi => dispatch => {
   dispatch({ type: JEDI_CREATION_REQUESTED });
-  return axios.post("http://localhost:3001/jedi", jedi).then(res => {
+  return axios.post(`${BASE_API_URL}/jedi`, jedi).then(res => {
     const newJedi = res.data;
 
     dispatch({
@@ -28,5 +30,5 @@ export const createJedi = jedi => dispatch => {
 
 export const fetchJedi = () => dispatch => {
   dispatch({ type: JEDI_REQUESTED });
-  axios.get("http://localhost:3001/jedi").then(res => dispatch(jediReceived(res.data)));
+  axios.get(`${BASE_API_URL}/jedi`).then(res => dispatch(jediReceived(res.data)));
 };

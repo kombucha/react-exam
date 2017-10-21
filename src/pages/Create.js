@@ -34,6 +34,7 @@ class Create extends PureComponent {
 
 Create.propTypes = {
   createJedi: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default Create;

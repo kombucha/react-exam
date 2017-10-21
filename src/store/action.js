@@ -10,6 +10,8 @@ export const JEDI_RECEIVED = "JEDI_RECEIVED";
 export const JEDI_CREATION_REQUESTED = "JEDI_CREATION_REQUESTED";
 export const JEDI_CREATION_RECEIVED = "JEDI_CREATION_RECEIVED";
 
+export const jediReceived = jedi => ({ type: JEDI_RECEIVED, payload: jedi });
+
 export const createJedi = jedi => dispatch => {
   dispatch({ type: JEDI_CREATION_REQUESTED });
   return axios.post("http://localhost:3001/jedi", jedi).then(res => {
@@ -26,10 +28,5 @@ export const createJedi = jedi => dispatch => {
 
 export const fetchJedi = () => dispatch => {
   dispatch({ type: JEDI_REQUESTED });
-  axios.get("http://localhost:3001/jedi").then(res => {
-    dispatch({
-      type: JEDI_RECEIVED,
-      payload: res.data,
-    });
-  });
+  axios.get("http://localhost:3001/jedi").then(res => dispatch(jediReceived(res.data)));
 };

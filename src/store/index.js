@@ -9,4 +9,10 @@ import reducer from "./reducer";
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
+// Actions
+export { createJedi, fetchJedi } from "./action";
+
+// Selectors
+export { allJedi } from "./reducer";
+
 export default store;

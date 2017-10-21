@@ -10,22 +10,15 @@ export const JEDI_RECEIVED = "JEDI_RECEIVED";
 export const JEDI_CREATION_REQUESTED = "JEDI_CREATION_REQUESTED";
 export const JEDI_CREATION_RECEIVED = "JEDI_CREATION_RECEIVED";
 
-export const jediReceived = jedi => ({ type: JEDI_RECEIVED, payload: jedi });
+export const jediReceived = jediList => ({ type: JEDI_RECEIVED, payload: jediList });
+
+export const jediCreated = jedi => ({ type: JEDI_CREATION_RECEIVED, payload: jedi });
 
 const BASE_API_URL = process.env.BASE_API_URL || "";
 
 export const createJedi = jedi => dispatch => {
   dispatch({ type: JEDI_CREATION_REQUESTED });
-  return axios.post(`${BASE_API_URL}/jedi`, jedi).then(res => {
-    const newJedi = res.data;
-
-    dispatch({
-      type: JEDI_CREATION_RECEIVED,
-      payload: newJedi,
-    });
-
-    return newJedi;
-  });
+  return axios.post(`${BASE_API_URL}/jedi`, jedi).then(res => dispatch(jediCreated(res.data)));
 };
 
 export const fetchJedi = () => dispatch => {

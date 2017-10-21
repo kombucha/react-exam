@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "json-server": "^0.9.5",
+    "prettier": "1.7.4",
     "react-scripts": "0.9.1"
   },
   "scripts": {

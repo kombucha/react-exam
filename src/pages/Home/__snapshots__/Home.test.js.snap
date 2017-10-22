@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    fetchJedi={[Function]}
+    isLoading={false}
+    jedi={
+        Array [
+            Object {
+              "id": 0,
+              "name": "Mace Windu",
+            },
+            Object {
+              "id": 1,
+              "name": "Yoda",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <pure(JediList)
+          list={
+                    Array [
+                              Object {
+                                "id": 0,
+                                "name": "Mace Windu",
+                              },
+                              Object {
+                                "id": 1,
+                                "name": "Yoda",
+                              },
+                            ]
+          }
+/>,
+        <Link
+          className="Home__create-link"
+          replace={false}
+          to="/create"
+>
+          +
+</Link>,
+      ],
+      "className": "Home",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "list": Array [
+            Object {
+              "id": 0,
+              "name": "Mace Windu",
+            },
+            Object {
+              "id": 1,
+              "name": "Yoda",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "children": "+",
+          "className": "Home__create-link",
+          "replace": false,
+          "to": "/create",
+        },
+        "ref": null,
+        "rendered": "+",
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <pure(JediList)
+            list={
+                        Array [
+                                    Object {
+                                      "id": 0,
+                                      "name": "Mace Windu",
+                                    },
+                                    Object {
+                                      "id": 1,
+                                      "name": "Yoda",
+                                    },
+                                  ]
+            }
+/>,
+          <Link
+            className="Home__create-link"
+            replace={false}
+            to="/create"
+>
+            +
+</Link>,
+        ],
+        "className": "Home",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "list": Array [
+              Object {
+                "id": 0,
+                "name": "Mace Windu",
+              },
+              Object {
+                "id": 1,
+                "name": "Yoda",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "children": "+",
+            "className": "Home__create-link",
+            "replace": false,
+            "to": "/create",
+          },
+          "ref": null,
+          "rendered": "+",
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`should render properly when loading 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    fetchJedi={[Function]}
+    isLoading={true}
+    jedi={
+        Array [
+            Object {
+              "id": 0,
+              "name": "Mace Windu",
+            },
+            Object {
+              "id": 1,
+              "name": "Yoda",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span>
+          Loading
+</span>,
+        <Link
+          className="Home__create-link"
+          replace={false}
+          to="/create"
+>
+          +
+</Link>,
+      ],
+      "className": "Home",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Loading",
+        },
+        "ref": null,
+        "rendered": "Loading",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "children": "+",
+          "className": "Home__create-link",
+          "replace": false,
+          "to": "/create",
+        },
+        "ref": null,
+        "rendered": "+",
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span>
+            Loading
+</span>,
+          <Link
+            className="Home__create-link"
+            replace={false}
+            to="/create"
+>
+            +
+</Link>,
+        ],
+        "className": "Home",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Loading",
+          },
+          "ref": null,
+          "rendered": "Loading",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "children": "+",
+            "className": "Home__create-link",
+            "replace": false,
+            "to": "/create",
+          },
+          "ref": null,
+          "rendered": "+",
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

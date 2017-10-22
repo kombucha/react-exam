@@ -4,14 +4,7 @@ exports[`should render properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Jedi
-    jedi={
-        Object {
-            "id": 0,
-            "name": "Mace Windu",
-          }
-    }
-/>,
+  Symbol(enzyme.__unrendered__): <TextInput />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -24,21 +17,11 @@ ShallowWrapper {
     "key": null,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        "Jedi: id: ",
-        0,
-        "name: ",
-        "Mace Windu",
-      ],
+      "className": "TextInput ",
     },
     "ref": null,
-    "rendered": Array [
-      "Jedi: id: ",
-      0,
-      "name: ",
-      "Mace Windu",
-    ],
-    "type": "div",
+    "rendered": null,
+    "type": "input",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -46,21 +29,11 @@ ShallowWrapper {
       "key": null,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          "Jedi: id: ",
-          0,
-          "name: ",
-          "Mace Windu",
-        ],
+        "className": "TextInput ",
       },
       "ref": null,
-      "rendered": Array [
-        "Jedi: id: ",
-        0,
-        "name: ",
-        "Mace Windu",
-      ],
-      "type": "div",
+      "rendered": null,
+      "type": "input",
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { createJedi } from "../store";
+import { createJedi } from "../../store";
 import Create from "./Create";
 
 const mapDispatchToProps = dispatch => ({

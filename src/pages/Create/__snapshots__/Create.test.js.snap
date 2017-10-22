@@ -1,0 +1,576 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Create
+    createJedi={[Function]}
+    history={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": <form
+        className="Create__form"
+        onSubmit={[Function]}
+>
+        <TextInput
+                autoFocus={true}
+                minLength={3}
+                name="name"
+                onChange={[Function]}
+                placeholder="Name"
+                required={true}
+                type="text"
+                value=""
+        />
+        <p>
+                There is no emotion, there is peace. 
+                <br />
+                There is no ignorance, there is knowledge.
+                <br />
+                There is no passion, there is serenity.
+                <br />
+                There is no chaos, there is harmony.
+                <br />
+                There is no death, there is the Force
+                <br />
+        </p>
+        <label
+                className="Create__terms"
+                htmlFor="termsOfServices"
+        >
+                i accept the jedi code
+                <input
+                        checked={false}
+                        id="termsOfServices"
+                        name="termsOfServices"
+                        onChange={[Function]}
+                        type="checkbox"
+                />
+        </label>
+        <div>
+                <Button
+                        disabled={true}
+                        type="submit"
+                >
+                        Create
+                </Button>
+        </div>
+</form>,
+      "className": "Create",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <TextInput
+            autoFocus={true}
+            minLength={3}
+            name="name"
+            onChange={[Function]}
+            placeholder="Name"
+            required={true}
+            type="text"
+            value=""
+/>,
+          <p>
+            There is no emotion, there is peace. 
+            <br />
+            There is no ignorance, there is knowledge.
+            <br />
+            There is no passion, there is serenity.
+            <br />
+            There is no chaos, there is harmony.
+            <br />
+            There is no death, there is the Force
+            <br />
+</p>,
+          <label
+            className="Create__terms"
+            htmlFor="termsOfServices"
+>
+            i accept the jedi code
+            <input
+                        checked={false}
+                        id="termsOfServices"
+                        name="termsOfServices"
+                        onChange={[Function]}
+                        type="checkbox"
+            />
+</label>,
+          <div>
+            <Button
+                        disabled={true}
+                        type="submit"
+            >
+                        Create
+            </Button>
+</div>,
+        ],
+        "className": "Create__form",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "function",
+          "props": Object {
+            "autoFocus": true,
+            "minLength": 3,
+            "name": "name",
+            "onChange": [Function],
+            "placeholder": "Name",
+            "required": true,
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "There is no emotion, there is peace. ",
+              <br />,
+              "There is no ignorance, there is knowledge.",
+              <br />,
+              "There is no passion, there is serenity.",
+              <br />,
+              "There is no chaos, there is harmony.",
+              <br />,
+              "There is no death, there is the Force",
+              <br />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "There is no emotion, there is peace. ",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "There is no ignorance, there is knowledge.",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "There is no passion, there is serenity.",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "There is no chaos, there is harmony.",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "There is no death, there is the Force",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "i accept the jedi code",
+              <input
+                checked={false}
+                id="termsOfServices"
+                name="termsOfServices"
+                onChange={[Function]}
+                type="checkbox"
+/>,
+            ],
+            "className": "Create__terms",
+            "htmlFor": "termsOfServices",
+          },
+          "ref": null,
+          "rendered": Array [
+            "i accept the jedi code",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "checked": false,
+                "id": "termsOfServices",
+                "name": "termsOfServices",
+                "onChange": [Function],
+                "type": "checkbox",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Button
+              disabled={true}
+              type="submit"
+>
+              Create
+</Button>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Create",
+              "disabled": true,
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Create",
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "form",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": <form
+          className="Create__form"
+          onSubmit={[Function]}
+>
+          <TextInput
+                    autoFocus={true}
+                    minLength={3}
+                    name="name"
+                    onChange={[Function]}
+                    placeholder="Name"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <p>
+                    There is no emotion, there is peace. 
+                    <br />
+                    There is no ignorance, there is knowledge.
+                    <br />
+                    There is no passion, there is serenity.
+                    <br />
+                    There is no chaos, there is harmony.
+                    <br />
+                    There is no death, there is the Force
+                    <br />
+          </p>
+          <label
+                    className="Create__terms"
+                    htmlFor="termsOfServices"
+          >
+                    i accept the jedi code
+                    <input
+                              checked={false}
+                              id="termsOfServices"
+                              name="termsOfServices"
+                              onChange={[Function]}
+                              type="checkbox"
+                    />
+          </label>
+          <div>
+                    <Button
+                              disabled={true}
+                              type="submit"
+                    >
+                              Create
+                    </Button>
+          </div>
+</form>,
+        "className": "Create",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TextInput
+              autoFocus={true}
+              minLength={3}
+              name="name"
+              onChange={[Function]}
+              placeholder="Name"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <p>
+              There is no emotion, there is peace. 
+              <br />
+              There is no ignorance, there is knowledge.
+              <br />
+              There is no passion, there is serenity.
+              <br />
+              There is no chaos, there is harmony.
+              <br />
+              There is no death, there is the Force
+              <br />
+</p>,
+            <label
+              className="Create__terms"
+              htmlFor="termsOfServices"
+>
+              i accept the jedi code
+              <input
+                            checked={false}
+                            id="termsOfServices"
+                            name="termsOfServices"
+                            onChange={[Function]}
+                            type="checkbox"
+              />
+</label>,
+            <div>
+              <Button
+                            disabled={true}
+                            type="submit"
+              >
+                            Create
+              </Button>
+</div>,
+          ],
+          "className": "Create__form",
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "function",
+            "props": Object {
+              "autoFocus": true,
+              "minLength": 3,
+              "name": "name",
+              "onChange": [Function],
+              "placeholder": "Name",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "There is no emotion, there is peace. ",
+                <br />,
+                "There is no ignorance, there is knowledge.",
+                <br />,
+                "There is no passion, there is serenity.",
+                <br />,
+                "There is no chaos, there is harmony.",
+                <br />,
+                "There is no death, there is the Force",
+                <br />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "There is no emotion, there is peace. ",
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              "There is no ignorance, there is knowledge.",
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              "There is no passion, there is serenity.",
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              "There is no chaos, there is harmony.",
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              "There is no death, there is the Force",
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "i accept the jedi code",
+                <input
+                  checked={false}
+                  id="termsOfServices"
+                  name="termsOfServices"
+                  onChange={[Function]}
+                  type="checkbox"
+/>,
+              ],
+              "className": "Create__terms",
+              "htmlFor": "termsOfServices",
+            },
+            "ref": null,
+            "rendered": Array [
+              "i accept the jedi code",
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "checked": false,
+                  "id": "termsOfServices",
+                  "name": "termsOfServices",
+                  "onChange": [Function],
+                  "type": "checkbox",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Button
+                disabled={true}
+                type="submit"
+>
+                Create
+</Button>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Create",
+                "disabled": true,
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Create",
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "form",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

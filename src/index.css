@@ -1,5 +1,44 @@
-body {
+/* NB: Consider the use of a css preprocessor :) */
+
+/* Very basic reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h6 {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: StarWars;
+  src: url(./starwars.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: StarWarsHollow;
+  src: url(./starwars-hollow.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: StarWars, sans-serif;
+  color: white;
+
+  /* Starry background, lifted from http://lea.verou.me/css3patterns/#starry-night ❤️ */
+  background-color: #151515;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 4px),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 6px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 12px),
+    radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 3px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }

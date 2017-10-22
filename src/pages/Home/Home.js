@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import Jedi from "../components/Jedi";
+import JediList from "../../components/JediList";
 import "./Home.css";
 
 class Home extends PureComponent {
@@ -12,25 +12,15 @@ class Home extends PureComponent {
 
   _renderLoader = () => <span>Loading</span>;
 
-  _renderJediList = jedi => {
-    return (
-      <ul>
-        {jedi.map(j => (
-          <li key={j.id}>
-            <Jedi jedi={j} />
-          </li>
-        ))}
-      </ul>
-    );
-  };
-
   render() {
     const { jedi, isLoading } = this.props;
 
     return (
       <div className="Home">
-        {isLoading ? this._renderLoader() : this._renderJediList(jedi)}
-        <Link to="/create">Create jedi</Link>
+        {isLoading ? this._renderLoader() : <JediList list={jedi} />}
+        <Link className="Home__create-link" to="/create">
+          +
+        </Link>
       </div>
     );
   }

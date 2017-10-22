@@ -1,0 +1,14 @@
+.TextInput {
+  font-size: 1.5rem;
+  font-family: inherit;
+  background: none;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid #feda4a;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.TextInput:focus {
+  opacity: 1;
+}

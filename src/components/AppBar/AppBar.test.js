@@ -1,13 +1,8 @@
 import React from "react";
-import Jedi from "./Jedi";
+import AppBar from "./index";
 import { shallow } from "enzyme";
 
-const testJedi = {
-  id: 0,
-  name: "Mace Windu",
-};
-
 it("should render properly", () => {
-  const wrapper = shallow(<Jedi jedi={testJedi} />);
+  const wrapper = shallow(<AppBar title="Oh hai" />);
   expect(wrapper).toMatchSnapshot();
 });

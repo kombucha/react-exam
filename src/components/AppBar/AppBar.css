@@ -1,0 +1,21 @@
+.AppBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 64px;
+  padding: 8px 16px;
+
+  background-color: #222;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+
+.AppBar__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.AppBar__title {
+  font-family: StarWarsHollow;
+  font-size: 1.5rem;
+}

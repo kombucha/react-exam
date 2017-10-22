@@ -1,0 +1,19 @@
+.Button {
+  display: inline-block;
+  border: none;
+  background: none;
+  color: #feda4a;
+  font-family: inherit;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.Button:hover {
+  opacity: 1;
+}
+
+.Button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

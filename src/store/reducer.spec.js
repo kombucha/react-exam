@@ -1,5 +1,5 @@
-import reducer, { allJedi } from "./reducer";
-import { jediReceived, jediCreated } from "./action";
+import reducer, { allJedi, isLoading } from "./reducer";
+import { jediReceived, jediCreated, JEDI_REQUESTED } from "./action";
 
 const testJediList = [
   { id: 1, name: "Stan" },
@@ -10,7 +10,7 @@ const testJediList = [
 
 it("should init the state properly", () => {
   const actual = reducer(undefined, {});
-  const expected = { map: {}, all: [] };
+  const expected = { map: {}, all: [], loading: false };
 
   expect(actual).toEqual(expected);
 });
@@ -67,17 +67,41 @@ it("should not add a duplicate jedi id to the list on JEDI_CREATION_RECEIVED", (
   expect(actual.all).toEqual(expectedList);
 });
 
-it("should return an array of jedi", () => {
-  const state = {
-    map: {
-      0: { id: 0, name: "John Wick" },
-      1: { id: 1, name: "Marie Joel" },
-    },
-    all: [0, 1],
-  };
+it("should set loading to true on JEDI_REQUESTED", () => {
+  const actualState = reducer(undefined, { type: JEDI_REQUESTED });
+  const expectedState = true;
 
-  const actual = allJedi(state);
-  const expected = [{ id: 0, name: "John Wick" }, { id: 1, name: "Marie Joel" }];
+  expect(actualState.loading).toEqual(expectedState);
+});
 
-  expect(actual).toEqual(expected);
+it("should set loading to false on JEDI_RECEIVED", () => {
+  const actualState = reducer(undefined, jediReceived([]));
+  const expectedState = false;
+
+  expect(actualState.loading).toEqual(expectedState);
+});
+
+describe("selectors", () => {
+  it("should return an array of jedi", () => {
+    const state = {
+      map: {
+        0: { id: 0, name: "John Wick" },
+        1: { id: 1, name: "Marie Joel" },
+      },
+      all: [0, 1],
+    };
+
+    const actual = allJedi(state);
+    const expected = [{ id: 0, name: "John Wick" }, { id: 1, name: "Marie Joel" }];
+
+    expect(actual).toEqual(expected);
+  });
+
+  it("should return the loading state", () => {
+    const state = { loading: false };
+    const actual = isLoading(state);
+    const expected = false;
+
+    expect(actual).toEqual(expected);
+  });
 });

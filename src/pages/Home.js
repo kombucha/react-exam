@@ -10,19 +10,26 @@ class Home extends PureComponent {
     this.props.fetchJedi();
   }
 
+  _renderLoader = () => <span>Loading</span>;
+
+  _renderJediList = jedi => {
+    return (
+      <ul>
+        {jedi.map(j => (
+          <li key={j.id}>
+            <Jedi jedi={j} />
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   render() {
-    const { jedi } = this.props;
+    const { jedi, isLoading } = this.props;
 
     return (
       <div className="Home">
-        <ul>
-          {jedi.map(j => (
-            <li key={j.id}>
-              <Jedi jedi={j} />
-            </li>
-          ))}
-        </ul>
-
+        {isLoading ? this._renderLoader() : this._renderJediList(jedi)}
         <Link to="/create">Create jedi</Link>
       </div>
     );
@@ -32,6 +39,7 @@ class Home extends PureComponent {
 Home.propTypes = {
   jedi: PropTypes.array,
   fetchJedi: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 export default Home;

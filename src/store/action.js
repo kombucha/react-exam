@@ -23,5 +23,5 @@ export const createJedi = jedi => dispatch => {
 
 export const fetchJedi = () => dispatch => {
   dispatch({ type: JEDI_REQUESTED });
-  axios.get(`${BASE_API_URL}/jedi`).then(res => dispatch(jediReceived(res.data)));
+  return axios.get(`${BASE_API_URL}/jedi`).then(res => dispatch(jediReceived(res.data)));
 };

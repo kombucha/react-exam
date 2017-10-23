@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
-import { fetchJedi, allJedi, isLoading } from "../../store";
+import { fetchJedi, allJedi, isLoading, getError } from "../../store";
 import Home from "./Home";
 
 const mapStateToProps = state => ({
   jedi: allJedi(state),
   isLoading: isLoading(state),
+  error: getError(state),
 });
 
 const mapDispatchToProps = dispatch => ({

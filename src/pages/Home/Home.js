@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import JediList from "../../components/JediList";
+import Error from "../../components/Error";
 import "./Home.css";
 
 class Home extends PureComponent {
@@ -10,14 +11,21 @@ class Home extends PureComponent {
     this.props.fetchJedi();
   }
 
-  _renderLoader = () => <span>Loading</span>;
-
   render() {
-    const { jedi, isLoading } = this.props;
+    const { jedi, isLoading, error } = this.props;
+
+    let content;
+    if (isLoading) {
+      content = <span>Loading</span>;
+    } else if (error) {
+      content = <Error message={error} />;
+    } else {
+      content = <JediList list={jedi} />;
+    }
 
     return (
       <div className="Home">
-        {isLoading ? this._renderLoader() : <JediList list={jedi} />}
+        {content}
         <Link className="Home__create-link" to="/create">
           +
         </Link>
@@ -30,6 +38,7 @@ Home.propTypes = {
   jedi: PropTypes.array,
   fetchJedi: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
+  error: PropTypes.string,
 };
 
 export default Home;

@@ -13,6 +13,6 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 export { createJedi, fetchJedi } from "./action";
 
 // Selectors
-export { allJedi, isLoading } from "./reducer";
+export { allJedi, isLoading, getError } from "./reducer";
 
 export default store;

@@ -10,7 +10,7 @@ const testJediList = [
 
 it("should init the state properly", () => {
   const actual = reducer(undefined, {});
-  const expected = { map: {}, all: [], loading: false };
+  const expected = { map: {}, all: [], loading: false, error: null };
 
   expect(actual).toEqual(expected);
 });

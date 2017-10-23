@@ -4,7 +4,12 @@
 
 import { combineReducers } from "redux";
 
-import { JEDI_REQUESTED, JEDI_RECEIVED, JEDI_CREATION_RECEIVED } from "./action";
+import {
+  JEDI_REQUESTED,
+  JEDI_RECEIVED,
+  JEDI_RECEIVED_ERROR,
+  JEDI_CREATION_RECEIVED,
+} from "./action";
 
 const map = (state = {}, action) => {
   switch (action.type) {
@@ -32,6 +37,7 @@ const loading = (state = false, action) => {
   switch (action.type) {
     case JEDI_REQUESTED:
       return true;
+    case JEDI_RECEIVED_ERROR:
     case JEDI_RECEIVED:
       return false;
     default:
@@ -39,10 +45,20 @@ const loading = (state = false, action) => {
   }
 };
 
-const reducer = combineReducers({ map, all, loading });
+const error = (state = null, action) => {
+  switch (action.type) {
+    case JEDI_RECEIVED_ERROR:
+      return action.error.message;
+    default:
+      return state;
+  }
+};
+
+const reducer = combineReducers({ map, all, loading, error });
 
 export default reducer;
 
-// Selectors
+// Jedi listing selectors
 export const allJedi = state => state.all.map(id => state.map[id]);
 export const isLoading = state => state.loading;
+export const getError = state => state.error;
